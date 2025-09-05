@@ -1,0 +1,6 @@
+.env
+/_pycache_
+__pycache__/ai_summarizer.cpython-313.pyc
+__pycache__/config.cpython-313.pyc
+__pycache__/newsapi_client.cpython-313.pyc
+__pycache__/telegram_client.cpython-313.pyc
