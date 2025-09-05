@@ -1,6 +1,6 @@
 from newsapi_client import get_ai_news
 from ai_summarizer import summarize_news
-from whatsapp_client import send_whatsapp
+from telegram_client import send_telegram
 
 def run_pipeline():
     print("Fetching news...")
@@ -10,7 +10,7 @@ def run_pipeline():
     summary = summarize_news(news_json)
     
     print("Sending via WhatsApp...")
-    send_whatsapp(summary)
+    send_telegram(summary)
     print("Done!")
 
 if __name__ == "__main__":

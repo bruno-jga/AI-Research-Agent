@@ -1,17 +1,9 @@
-import os
-from twilio.rest import Client
+from apscheduler.schedulers.blocking import BlockingScheduler
+from main import run_pipeline
 
-TWILIO_SID = os.getenv("TWILIO_SID")
-TWILIO_AUTH = os.getenv("TWILIO_AUTH")
-TWILIO_WHATSAPP_NUMBER = os.getenv("TWILIO_WHATSAPP_NUMBER")  # "whatsapp:+14155238886"
-MY_WHATSAPP_NUMBER = os.getenv("MY_WHATSAPP_NUMBER")          # "whatsapp:+3519xxxxxxx"
-
-client = Client(TWILIO_SID, TWILIO_AUTH)
-
-def send_whatsapp(message):
-    msg = client.messages.create(
-        from_=TWILIO_WHATSAPP_NUMBER,
-        body=message,
-        to=MY_WHATSAPP_NUMBER,
-    )
-    return msg.sid
+def schedule_job():
+    scheduler = BlockingScheduler()
+    # Run every day at 9 AM
+    scheduler.add_job(run_pipeline, "cron", hour=19, minute=50)
+    print("Scheduler started... (Ctrl+C to stop)")
+    scheduler.start()
