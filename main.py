@@ -8,7 +8,6 @@ def run_pipeline():
     
     print("Summarizing...")
     summary = summarize_news(news_json)
-    print (summary)
     
     print("Sending via Telegram...")
     send_telegram(summary)
