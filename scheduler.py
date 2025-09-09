@@ -4,6 +4,8 @@ from main import run_pipeline
 def schedule_job():
     scheduler = BlockingScheduler()
     # Run every day at 9 AM
-    scheduler.add_job(run_pipeline, "cron", hour=19, minute=50)
+    scheduler.add_job(run_pipeline, "cron", hour=21, minute=13)
     print("Scheduler started... (Ctrl+C to stop)")
     scheduler.start()
+
+schedule_job()
