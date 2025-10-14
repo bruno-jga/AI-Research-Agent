@@ -74,7 +74,7 @@ TELEGRAM_CHAT_ID=987654321
 
 ## Usage
 
-Run once:
+Adjust the time and run once:
 ```
 python scheduler.py
 ```
