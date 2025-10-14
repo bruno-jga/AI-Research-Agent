@@ -5,10 +5,10 @@ AI News is a Python-based automation tool that fetches the latest **Artificial I
 ---
 
 ## 📌 Features
-- Fetches top 10 most popular AI-related articles from **NewsAPI**  
-- Summarizes news into a short natural-language digest using **OpenAI LLMs**  
-- Sends daily updates to **Telegram** (via your bot)  
-- Runs automatically on a schedule (via APScheduler)  
+- Fetches top 10 most popular AI-related articles from **NewsAPI**.  
+- Summarizes news into a short natural-language digest using **OpenAI LLMs**.
+- Sends daily updates to **Telegram** (via your bot).  
+- Runs automatically on a schedule (via APScheduler).  
 - Modular design
 
 ---
